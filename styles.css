@@ -1,0 +1,181 @@
+:root {
+    --main-bg-color: #f0f8ff; // hex
+    --accent-color: hsl(200, 100%, 50%); // hue
+    --fallback-font: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: var(--main-bg-color, white);
+    font-family: var(--fallback-font); // fallback variable
+    color: #333;
+    margin: auto;
+    padding: 1rem;      
+  }
+  
+  /* Box Model: Includes margins, padding, and borders */
+  header {
+    margin-top: 20px;       // Unique absolute unit
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 15px;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: #e0f7fa;
+    border-style: solid;
+    border-color: #444;
+    position: sticky;
+  }
+  
+  /* Short-hand version */
+  main {
+    margin: 1em 2em 1em 2em;    // Unique relative unit
+    padding: 2vh;       // Unique relative unit
+    border: 1px solid #999;
+  }
+  
+  /* More colors */
+  h1, h2 {
+    color: rgb(20, 90, 160);
+  }
+  
+  nav a:hover {
+    color: orange;
+  }
+  
+  p {
+    color: color-mix(in srgb, blue 60%, white 40%);
+  }
+  
+  /* Text styles */
+  h3 {
+    text-decoration: underline;
+    text-align: center;
+  }
+  
+  /* Display */
+  span {
+    display: inline-block;
+    background: yellow;
+    padding: 0.5rem; // Unique relative unit
+  }
+  
+  div {
+    display: block;
+  }
+  
+  /* Sizing */
+  img {
+    width: 50%;
+    max-width: 30cm; // Unique absolute unit
+    min-width: 200mm; // Unique absolute unit
+    height: 50%;
+  }
+  
+  /* Positioning */
+  footer {
+    position: relative;
+    bottom: 0;
+    background-color: #ccc;
+  }
+  
+  /* Flexbox */
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    list-style-type: none;
+  }
+  
+  /* Grid */
+  #agenda {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 1rem;
+  }
+  
+  /* Media query */
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: #fffbe6;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  }
+  
+  /* Selectors */
+  /* Class Selector */
+  .box {
+    border: 1px dashed gray;
+  }
+  
+  /* ID Selector */
+  #media {
+    background-color: #f9f9f9;
+  }
+  
+  /* Universal Selector */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Element Selector */
+  section {
+    padding: 10px;
+  }
+  
+  /* Attribute Selector */
+  input[type="text"] {
+    border: 1px solid #333;
+  }
+  
+  /* Pseudo-class Selector */
+  button:active {
+    background-color: lightgreen;
+  }
+  
+  /* Selector List */
+  h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Combinators */
+  section > p {
+    font-style: italic;
+  }
+  
+  section p + p {
+    color: teal;
+  }
+  
+  section p ~ p {
+    font-weight: bold;
+  }
+  
+  section p + img {
+    border: 2px solid red;
+  }
+  
+  /* Combining Selectors */
+  section#agenda {
+    background-color: #f0fff0;
+  }
+  
+  /* :has() Selector */
+  form:has(textarea) {
+    border: 2px dotted blue;
+  }
+  
+  /* Nexted Selector */
+  @layer layout {
+    main {
+      & > section {
+        margin-bottom: 2rem;
+      }
+    }
+  }
