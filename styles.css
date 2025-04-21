@@ -1,12 +1,12 @@
 :root {
-    --main-bg-color: #f0f8ff; // hex
-    --accent-color: hsl(200, 100%, 50%); // hue
+    --main-bg-color: #f0f8ff;
+    --accent-color: hsl(200, 100%, 50%);
     --fallback-font: Arial, sans-serif;
   }
   
   body {
     background-color: var(--main-bg-color, white);
-    font-family: var(--fallback-font); // fallback variable
+    font-family: var(--fallback-font);
     color: #333;
     margin: auto;
     padding: 1rem;      
@@ -14,7 +14,7 @@
   
   /* Box Model: Includes margins, padding, and borders */
   header {
-    margin-top: 20px;       // Unique absolute unit
+    margin-top: 20px;
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -32,8 +32,8 @@
   
   /* Short-hand version */
   main {
-    margin: 1em 2em 1em 2em;    // Unique relative unit
-    padding: 2vh;       // Unique relative unit
+    margin: 1em 2em 1em 2em;
+    padding: 2vh;
     border: 1px solid #999;
   }
   
@@ -47,7 +47,7 @@
   }
   
   p {
-    color: color-mix(in srgb, blue 60%, white 40%);
+    color: color-mix(in srgb, plum, #f00)
   }
   
   /* Text styles */
@@ -60,7 +60,7 @@
   span {
     display: inline-block;
     background: yellow;
-    padding: 0.5rem; // Unique relative unit
+    padding: 0.5rem;
   }
   
   div {
@@ -70,8 +70,8 @@
   /* Sizing */
   img {
     width: 50%;
-    max-width: 30cm; // Unique absolute unit
-    min-width: 200mm; // Unique absolute unit
+    max-width: 30cm;
+    min-width: 200mm;
     height: 50%;
   }
   
